@@ -1,0 +1,14 @@
+.git
+.github
+.venv
+venv
+__pycache__
+*.py[cod]
+.env
+.env.*
+!.env.example
+data
+*.db
+*.sqlite
+*.sqlite3
+*.dxf
