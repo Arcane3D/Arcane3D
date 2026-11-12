@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: image-to-dxf-laser-cut
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: BASE_URL
+        value: https://image-to-dxf-laser-cut.onrender.com
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DB_PATH
+        value: /var/data/app.db
+      - key: FILES_DIR
+        value: /var/data/files
+      - key: ALLOWED_REDIRECTS
+        value: https://chatgpt.com/connector_platform_oauth_redirect,https://chatgpt.com/connector/oauth/
+    disk:
+      name: image-to-dxf-data
+      mountPath: /var/data
+      sizeGB: 1
