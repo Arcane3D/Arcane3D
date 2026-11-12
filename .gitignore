@@ -16,6 +16,13 @@ data/
 *.sqlite3
 *.dxf
 
+# OCI/Docker runtime and backup data
+*.pem
+*.key
+oci/
+backups/
+image-to-dxf-backups/
+
 # Editor and OS files
 .DS_Store
 .idea/
