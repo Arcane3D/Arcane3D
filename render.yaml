@@ -5,10 +5,10 @@ services:
     plan: starter
     dockerfilePath: ./Dockerfile
     healthCheckPath: /
-    autoDeploy: true
+    autoDeployTrigger: off
     envVars:
       - key: BASE_URL
-        value: https://image-to-dxf-laser-cut.onrender.com
+        sync: false
       - key: SECRET_KEY
         generateValue: true
       - key: DB_PATH
