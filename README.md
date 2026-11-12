@@ -72,10 +72,13 @@ From your local computer, SSH to the Ubuntu VM:
 ssh -i /path/to/your-private-key ubuntu@YOUR_VM_PUBLIC_IP
 ```
 
-After confirming DNS for your chosen hostname points to this VM, run:
+Clone the public repository on the VM so you can inspect the installer before running it:
 
 ```bash
-sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/Arcane3D/Arcane3D/main/scripts/install-oracle-vm.sh)" -- your.dns.name
+git clone https://github.com/Arcane3D/Arcane3D.git
+cd Arcane3D
+less scripts/install-oracle-vm.sh
+sudo bash scripts/install-oracle-vm.sh your.dns.name
 ```
 
 The script:
