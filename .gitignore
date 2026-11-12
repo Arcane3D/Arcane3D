@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Runtime data and converted files
+data/
+*.db
+*.sqlite
+*.sqlite3
+*.dxf
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
